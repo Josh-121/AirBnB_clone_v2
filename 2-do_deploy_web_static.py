@@ -7,9 +7,9 @@ from datetime import datetime
 from fabric.api import *
 import os
 
-env.hosts = ["35.172.217.103", "3.236.20.149"]
+env.hosts = ["54.237.59.211", "52.87.255.147"]
 env.user = "ubuntu"
-
+env.key_filename = "~/.ssh/id_rsa"
 
 def do_pack():
     """
@@ -25,7 +25,6 @@ def do_pack():
         return archived_f_path
     else:
         return None
-
 
 def do_deploy(archive_path):
     """
